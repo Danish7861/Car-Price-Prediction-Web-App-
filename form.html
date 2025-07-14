@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🚘 Car Price Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Predict Your Car's Price</h1>
+        <p class="subheading">Enter your car details and get an estimated market price in PKR.</p>
+
+        {% if prediction %}
+            <div class="result">
+                {{ prediction }}
+            </div>
+        {% endif %}
+
+        <form action="/predict/" method="post" class="form-grid">
+
+            <div class="field">
+                <label>Location</label>
+                <select name="Location">
+                    <option>Karachi</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Hyderabad</option>
+                    <option>Sialkot</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Fuel Type</label>
+                <select name="Fuel_Type">
+                    <option>Petrol</option>
+                    <option>Diesel</option>
+                    <option>LPG</option>
+                    <option>CNG</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Transmission</label>
+                <select name="Transmission">
+                    <option>Manual</option>
+                    <option>Automatic</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Brand</label>
+                <select name="Brand">
+                    <option>Maruti</option>
+                    <option>Hyundai</option>
+                    <option>Honda</option>
+                    <option>Toyota</option>
+                    <option>Ford</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Owner Type</label>
+                <select name="Owner_Type">
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth & Above</option>
+                </select>
+            </div>
+
+            <div class="field"><label>Year</label><input type="number" name="Year" required></div>
+            <div class="field"><label>Kilometers Driven</label><input type="number" name="Kilometers_Driven" required></div>
+            <div class="field"><label>Mileage (km/l)</label><input type="number" step="any" name="Mileage" required></div>
+            <div class="field"><label>Engine (CC)</label><input type="number" step="any" name="Engine" required></div>
+            <div class="field"><label>Power (bhp)</label><input type="number" step="any" name="Power" required></div>
+            <div class="field"><label>Seats</label><input type="number" step="any" name="Seats" required></div>
+
+            <button type="submit">🚀 Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
