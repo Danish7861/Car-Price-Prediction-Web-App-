@@ -1,6 +1,6 @@
 # 🚘 Car Price Prediction Web App using FastAPI & Machine Learning
 
-![Car Price Prediction UI](car_price_image.png)
+![Car Price Prediction UI](car_price_image.PNG)
 
 A modern, AI-powered web application that predicts used car prices in PKR using a trained Machine Learning model and a sleek HTML/CSS frontend. The backend is built with FastAPI, and the UI is designed for an engaging user experience with dropdowns and clean layout.
 
